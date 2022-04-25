@@ -75,7 +75,7 @@ mis2mean = calcGROD(ebsd, grains)
 % |grainMean|> which averages arbitrary EBSD properties over grains. Here,
 % we use it to average the misorientation angle for each grain separately.
 
-% take the avarage of the misorientation angles for each grain
+% take the average of the misorientation angles for each grain
 GOS = ebsd.grainMean(mis2mean.angle);
 
 % plot it
