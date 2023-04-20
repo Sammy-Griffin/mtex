@@ -6,7 +6,7 @@
 % Systematic errors mostly occur due to a bad calibration of the EBSD
 % system and require additional knowledge to be corrected. Deviations from
 % the true orientation due to noisy Kikuchi pattern or tolerances of the
-% indecing algorithm can be modeled as random errors. In this section we
+% indexing algorithm can be modelled as random errors. In this section we
 % demonstrate how random errors can be significantly reduced using
 % denoising techniques.
 %
@@ -67,7 +67,7 @@ hold off
 
 %%
 % We clearly observe some deformation gradients withing the grains which
-% are superposed by random noise. 
+% are superimposed by random noise. 
 
 %% The Mean Filter
 %
@@ -91,7 +91,7 @@ plot(grains.boundary,'linewidth',2)
 hold off
 
 %%
-% We clearly see how the noise has been reduces. In order to further reduce
+% We clearly see how the noise has been reduced. In order to further reduce
 % the noise we may increase the number of neighbours that are taken into
 % account. 
 
@@ -168,8 +168,8 @@ hold off
 % controls the trade of between fitting the original data and forcing the
 % resulting map to be smooth.
 %
-% The @splineFilter uses as definition of smoothnes the curvature of the
-% orientation map. As a cosequence, the denoised images are very "round"
+% The @splineFilter uses as definition of smoothness the curvature of the
+% orientation map. As a consequence, the denoised images are very "round"
 % and similarly as for the @meanFilter subgrain boundaries will be smoothed
 % away. On the positive side the @meanFilter is up to now the only filter
 % that automatically calibrates the regularization parameter.
@@ -217,8 +217,8 @@ hold off
 %% The Infimal Convolution Filter
 % 
 % The infimal convolution filter was designed as a compromise between the
-% @splineFilter and the @halfQuadraticFilter. It is still under deveopment
-% and its use is not recommendet.
+% @splineFilter and the @halfQuadraticFilter. It is still under development
+% and its use is not recommended.
 
 F = infimalConvolutionFilter;
 F.lambda = 0.01; % sssmoothing parameter for the gradient
